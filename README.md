@@ -11,73 +11,73 @@ This is a Dockerfile/image to build a container for nginx, php7.2-fpm and compos
 
 ## PHP Extensions/Modules
 
-    ```
-        [PHP Modules]
-        calendar
-        Core
-        ctype
-        curl
-        date
-        dom
-        exif
-        fileinfo
-        filter
-        ftp
-        gd
-        gettext
-        hash
-        iconv
-        intl
-        json
-        ldap
-        libxml
-        mbstring
-        mcrypt
-        memcache
-        mysqli
-        mysqlnd
-        odbc
-        openssl
-        pcntl
-        pcre
-        PDO
-        pdo_dblib
-        pdo_mysql
-        PDO_ODBC
-        pdo_pgsql
-        pdo_sqlite
-        pgsql
-        Phar
-        posix
-        readline
-        Reflection
-        session
-        shmop
-        SimpleXML
-        soap
-        sockets
-        sodium
-        SPL
-        sqlite3
-        standard
-        sysvmsg
-        sysvsem
-        sysvshm
-        tidy
-        tokenizer
-        wddx
-        xml
-        xmlreader
-        xmlrpc
-        xmlwriter
-        xsl
-        Zend OPcache
-        zip
-        zlib
+```
+    [PHP Modules]
+    calendar
+    Core
+    ctype
+    curl
+    date
+    dom
+    exif
+    fileinfo
+    filter
+    ftp
+    gd
+    gettext
+    hash
+    iconv
+    intl
+    json
+    ldap
+    libxml
+    mbstring
+    mcrypt
+    memcache
+    mysqli
+    mysqlnd
+    odbc
+    openssl
+    pcntl
+    pcre
+    PDO
+    pdo_dblib
+    pdo_mysql
+    PDO_ODBC
+    pdo_pgsql
+    pdo_sqlite
+    pgsql
+    Phar
+    posix
+    readline
+    Reflection
+    session
+    shmop
+    SimpleXML
+    soap
+    sockets
+    sodium
+    SPL
+    sqlite3
+    standard
+    sysvmsg
+    sysvsem
+    sysvshm
+    tidy
+    tokenizer
+    wddx
+    xml
+    xmlreader
+    xmlrpc
+    xmlwriter
+    xsl
+    Zend OPcache
+    zip
+    zlib
 
-        [Zend Modules]
-        Zend OPcache
-    ```
+    [Zend Modules]
+    Zend OPcache
+```
 Nginx uses `php-fpm`for processing php requests through FastCGI.
 
 Ports 80, 3306 and 22 are exposed.
@@ -88,36 +88,38 @@ Composer is installed globally for use.
 
 To pull from Docker Hub-
 
-    ```
-        docker pull ankitjain28/php-nginx-composer:latest
-    ```
+```shell
+    docker pull ankitjain28/php-nginx-composer:latest
+```
 
 ## Running containers
 
 To run a container -
 
-    ```
-        sudo docker run --name <container-name> -d ankitjain28/php-nginx-composer
-    ```
+```shell
+    sudo docker run --name <container-name> -d ankitjain28/php-nginx-composer
+```
 
 To run commands within Container -
 
-    ```
-        sudo docker exec -it <container-name> <commands>
-    ```
+```shell
+    sudo docker exec -it <container-name> <commands>
+```
 
 Stop the Container -
 
-    ```
-        sudo docker stop <container-name>
-    ```
+```shell
+    sudo docker stop <container-name>
+```
+
 Start the Container -
 
-    ```
-        sudo docker start <container-name>
-    ```
+```shell
+    sudo docker start <container-name>
+```
+
 Delete the Container -
 
-    ```
-        sudo docker rm <container-name> -f
-    ```
+```shell
+    sudo docker rm <container-name> -f
+```
