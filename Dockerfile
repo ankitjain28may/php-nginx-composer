@@ -34,7 +34,7 @@ RUN apt-get update && apt-get upgrade -y && \
     cron
 
 # Install pear
-RUN apt-get install -y php-pear \
+RUN apt-get install -y php7.2 \
     && apt-get install -y libmcrypt-dev libreadline-dev \
     libfreetype6-dev \
     libicu-dev \
@@ -46,14 +46,13 @@ RUN apt-get install -y php-pear \
     libxml2-dev \
     gcc make autoconf libc-dev pkg-config
 
-
 # Install PHP
-RUN apt-get install -y php7.2-fpm \
+RUN apt-get install -y php-pear php7.2-fpm \
     php7.2-mysql \
     php7.2-curl \
     php7.2-gd \
     php7.2-intl \
-    php-memcache \
+    php7.2-memcache \
     php7.2-sqlite \
     php7.2-tidy \
     php7.2-xmlrpc \
